@@ -2,7 +2,9 @@ import express from "express";
 import mongoose from "mongoose";
 import connection from "./db.js";
 import Favorite from "./models/favorites.js";
-import 'dotenv/config';
+
+
+//import 'dotenv/config';
 
 dotenv.config();
 const app = express()
@@ -19,4 +21,5 @@ console.log("connected")
 app.listen(8080, () => {
         console.log(`Listening on port http://localhost:${8080}`);
     })
+    
 

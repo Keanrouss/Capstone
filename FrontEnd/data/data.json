@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "common_name": "European Silver Fir",
+    "default_image": {
+      "thumbnail": "https://perenual.com/storage/species_image/1_abies_alba/thumbnail/1536px-Abies_alba_SkalitC3A9.jpg"
+    }
+  },
+  {
+    "id": 2,
+    "common_name": "Pyramidalis Silver Fir",
+    "default_image": {
+      "thumbnail": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/thumbnail/49255769768_df55596553_b.jpg"
+    }
+  },
+  {
+    "id": 3,
+    "common_name": "European Silver Fir",
+    "default_image": {
+      "thumbnail": "https://perenual.com/storage/species_image/1_abies_alba/thumbnail/1536px-Abies_alba_SkalitC3A9.jpg"
+    }
+  },
+  {
+    "id": 4,
+    "common_name": "Pyramidalis Silver Fir",
+    "default_image": {
+      "thumbnail": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/thumbnail/49255769768_df55596553_b.jpg"
+    }
+  },
+  {
+    "id": 5,
+    "common_name": "European Silver Fir",
+    "default_image": {
+      "thumbnail": "https://perenual.com/storage/species_image/1_abies_alba/thumbnail/1536px-Abies_alba_SkalitC3A9.jpg"
+    }
+  },
+  {
+    "id": 6,
+    "common_name": "Pyramidalis Silver Fir",
+    "default_image": {
+      "thumbnail": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/thumbnail/49255769768_df55596553_b.jpg"
+    }
+  },
+  {
+    "id": 7,
+    "common_name": "European Silver Fir",
+    "default_image": {
+      "thumbnail": "https://perenual.com/storage/species_image/1_abies_alba/thumbnail/1536px-Abies_alba_SkalitC3A9.jpg"
+    }
+  },
+  {
+    "id": 8,
+    "common_name": "Pyramidalis Silver Fir",
+    "default_image": {
+      "thumbnail": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/thumbnail/49255769768_df55596553_b.jpg"
+    }
+  },
+  {
+    "id": 9,
+    "common_name": "European Silver Fir",
+    "default_image": {
+      "thumbnail": "https://perenual.com/storage/species_image/1_abies_alba/thumbnail/1536px-Abies_alba_SkalitC3A9.jpg"
+    }
+  },
+  {
+    "id": 10,
+    "common_name": "Pyramidalis Silver Fir",
+    "default_image": {
+      "thumbnail": "https://perenual.com/storage/species_image/2_abies_alba_pyramidalis/thumbnail/49255769768_df55596553_b.jpg"
+    }
+  }
+]

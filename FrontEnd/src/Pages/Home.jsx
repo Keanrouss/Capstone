@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import testData from '../../data/data.json';
 import PlantCard from '../components/PlantCard'
 
+
 // CALL TO GET A SINGLE PLANT DETAILS - MOVE THIS CODE TO PLANT PAGE
 // const response = await fetch(
 //   `${import.meta.env.VITE_PLANT_API}species/details/${plantId}?key=${

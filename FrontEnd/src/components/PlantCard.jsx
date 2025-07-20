@@ -21,7 +21,7 @@ function PlantCard({ plant }) {
 const styles = {
   card: {
     border: '1px solid green',
-    padding: '1rem',
+    padding: '1.5rem',
     margin: '1rem',
     width: '200px',
     borderRadius: '10px',

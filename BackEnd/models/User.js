@@ -1,21 +1,23 @@
 import mongoose from "mongoose";
-
+import Favorite from "./favorites.js";
 
 const UserSchema = mongoose.Schema({
-   
-    Username: {
+    username: {
        type: String,
-       require: true
+       require: true,
+       unique: true
     }, 
-   Password:{
-        type: String,
-        require: true
-    },
+    favorites:[mongoose.Schema.Types.ObjectId]// tell what type of data to expect of the property data.
+
+//    Password:{
+//         type: String,
+//         require: true
+//     },
 
 });
 
 //const Vegetable = mongoose.model('Veggie', VeggieSchema)
-module.exports= mongoose.model('User', UserSchema);
+export default mongoose.model('User', UserSchema);
 
 
-export default mongoose.model('Subject3');
+// export default mongoose.model('Subject3');/ old code from Jade

@@ -22,13 +22,14 @@ function PlantDetail() {
       try {
         setLoading(true)
         const response = await fetch(
- `${import.meta.env.VITE_PLANT_API}species/details/${Id}?key=${
+ `${import.meta.env.VITE_PLANT_API}species/details/${plantId}?key=${
  import.meta.env.VITE_APIKEY
   }`
  );
         console.log(response)
         if (!res.ok) throw new Error("Failed to fetch plant details");
         const data = await res.json();
+        console.log ('PlantDetail', data)
         setPlant(data);
       } catch (err) {
         console.error("Error:", err);

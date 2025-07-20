@@ -45,3 +45,8 @@ body{
 .read-the-docs {
   color: #888;
 }
+button{
+  border: 1px solid rgb(89, 183, 89);
+  margin: 5px;
+  
+}

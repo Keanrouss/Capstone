@@ -4,8 +4,13 @@ function NavBar() {
   };
 
   return (
-    <nav style={{ background: '#ccc', padding: '1rem', marginBottom: '1rem' }}>
-      <span style={{ marginRight: '2rem' }}>🌿 Plant App</span>
+    <nav style={{ 
+        background: 'black', 
+        padding: '1rem', 
+        marginBottom: '2rem',
+        display: "flex"
+         }}>
+      <h2 style={{ margin: '1rem' }}>🌿 Plant Lover</h2>
       <button onClick={handleSave}>Save</button>
     </nav>
   );

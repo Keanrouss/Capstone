@@ -10,14 +10,14 @@ function Login() {
 
     if (username.trim()) {
       // You can save the username if needed
-      navigate('/Selection');
+      navigate('/Dashboard');
     } else {
       alert('enter a username.');
     }
   };
 
   return (
-    <div style={{ padding: '1rem' }}>
+    <div style={{ padding: '2rem' }}>
       <h2>Login Page</h2>
       <form onSubmit={handleLogin}>
         <input

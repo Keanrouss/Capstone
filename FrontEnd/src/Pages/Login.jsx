@@ -5,12 +5,30 @@ function Login() {
   const [username, setUsername] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleLogin = async(e) => {
     e.preventDefault();
 
     if (username.trim()) {
+      try {
+      const response = await fetch(
+          `${import.meta.env.VITE_BASE_URL}/users/login`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username: username.trim() }),
+          }
+        );
+
+    const user = await response.json()
+    console.log(user)
+     navigate('/home', {state: user});
+  }catch(error){
+    console.error ('Error:', error)
+  }
       // You can save the username if needed
-      navigate('/Dashboard');
+      //navigate('/home', {state: user});
     } else {
       alert('Username Require');
     }

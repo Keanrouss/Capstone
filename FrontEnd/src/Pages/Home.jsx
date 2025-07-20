@@ -1,8 +1,11 @@
 import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 // DELETE THIS LINE WHEN READY TO ACTIVE API
 import testData from '../../data/data.json';
 import PlantCard from '../components/PlantCard'
 import Register from './Register';
+
+
 
 
 // CALL TO GET A SINGLE PLANT DETAILS - MOVE THIS CODE TO PLANT PAGE
@@ -15,6 +18,8 @@ import Register from './Register';
 function Home() {
   const [plants, setPlants] = useState([]);
   const [loading, setLoading] = useState(false);
+  const location = useLocation()
+  console.log('location ', location)
   console.log('plants ', plants);
 
   useEffect(() => {

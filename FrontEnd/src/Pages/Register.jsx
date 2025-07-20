@@ -5,12 +5,30 @@ function Register() {
   const [username, setUsername] = useState('');
   const navigate = useNavigate();
 
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
 
     if (username.trim()) {
+      try {
+      const response = await fetch(
+          `${import.meta.env.VITE_BASE_URL}/users/register`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ username: username.trim() }),
+          }
+        );
+
+    const user = await response.json()
+    console.log(user)
+    navigate('/')
+  }catch(error){
+    console.error ('Error:', error)
+  }
       // You can save the username if needed
-      navigate('/Login');
+      //navigate('/Login');
     } else {
       alert('Create an account');
     }

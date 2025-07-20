@@ -1,37 +1,36 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
-function Login() {
+function Register() {
   const [username, setUsername] = useState('');
   const navigate = useNavigate();
 
-  const handleLogin = (e) => {
+  const handleRegister = (e) => {
     e.preventDefault();
 
     if (username.trim()) {
       // You can save the username if needed
-      navigate('/Dashboard');
+      navigate('/Login');
     } else {
-      alert('Username Require');
+      alert('Create an account');
     }
   };
 
   return (
     <div style={{ padding: '2rem' }}>
-      <h2>Login Page</h2>
-      <form onSubmit={handleLogin}>
+      <h2>Registration Page</h2>
+      <form onSubmit={handleRegister}>
         <input
           type="text"
           placeholder="Enter username"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
-        <button type="Submit">Log In</button>
+        <button type="Submit">Register</button>
       </form>
-      <Link to='/register'>Register</Link>
+      <Link to='/'>Log In</Link>
     </div>
   );
 }
 
-export default Login;
-
+export default Register;

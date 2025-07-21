@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import testData from '../../data/data.json';
 import PlantCard from '../components/PlantCard'
 import Register from './Register';
+import NavBar from '../components/NavBar';
 
 
 
@@ -48,6 +49,8 @@ function Home() {
   }, []);
 
   return (
+    <>
+    <NavBar/>
     <div>
       <h1>Plants</h1>
       {loading && <p>Loading...</p>}
@@ -59,6 +62,7 @@ function Home() {
         ))}
       </div>
     </div>
+    </>
   );
 }
 //box look for the card to display plant

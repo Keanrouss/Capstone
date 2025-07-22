@@ -1,9 +1,10 @@
 // src/components/PlantCard.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Favorites from '../Pages/Favorites';
+import { useNavigate } from 'react-router-dom';
+import favorites from '../Pages/Favorites';
 function PlantCard({ plant , userId}) {
- // console.log(userId)
+ const navigate = useNavigate() 
 const addToFavorites= async ()=>{
   try {
     const fav= {
@@ -23,22 +24,23 @@ const addToFavorites= async ()=>{
             body: JSON.stringify(fav),
           }
         );
+        navigate ('/favorites', { state: userId })
+  
   } catch (error) {
     console.error ('Error:', error)
   }
-  
 }
   return (
     <div style={styles.card}>
       <h2>{plant.common_name }</h2>
       <img
-        src={plant.default_image?.thumbnail}
+        src={plant.default_image?.thumbnail} //returning the plant image but it comes in 3 different size. Thumbnail fit the best
         alt={plant.common_name}
         style={styles.image}
       />
       <p><strong>common_Name:</strong> {plant.common_name}</p>
       {addToFavorites && (
-        <button onClick={()=> addToFavorites(PlantCard)}>Save To Favorites</button>
+        <button onClick={()=> addToFavorites()}>Save To Favorites</button>
       )}
       
 

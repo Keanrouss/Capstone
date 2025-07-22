@@ -59,7 +59,7 @@ function Home() {
       {/* get plants after button click */}
       <div>
         {plants.map((plant) => ( // userId={location.state._id} that was a prop but it was causing home page to crash and not show.
-          <PlantCard key={plant.id}  plant={plant}  />
+          <PlantCard key={plant.id}  userId={location._id} plant={plant}  />
         ))}
       </div>
     </div>

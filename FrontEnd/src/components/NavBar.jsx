@@ -17,12 +17,12 @@ function NavBar() {
   return (
     <nav style={styles.nav}>
       <div style={styles.left}>
-      <h1 style={styles.logo}>🌿 Plant App</h1>
+      <h1 style={styles.logo}>🌿 Plant-U-ZY</h1>
       </div>
       <div style={styles.links}>
         <Link to="/home" style={styles.link}>Home</Link>
         <Link to="/favorites" style={styles.link}>Favorites</Link>
-        <Link to="/dashboard" style={styles.link}>Dashboard</Link>
+        <Link to="/AboutUS" style={styles.link}>About Us</Link>
         <Link to = "/" onClick={handleLogout} style={styles.link}>Logout</Link>
       </div>
     </nav>

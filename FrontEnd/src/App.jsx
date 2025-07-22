@@ -3,7 +3,7 @@ import './App.css';
 import Home from './Pages/Home';
 import PlantDetail from './Pages/PlantDetail'
 import Login from './Pages/Login';
-import Dashboard from './Pages/Dashboard';
+import AboutUs from './Pages/About';
 import Register from './Pages/Register';
 import Favorites from './Pages/Favorites';
 import { useState } from 'react';
@@ -30,7 +30,7 @@ function App() {
         LogoutMessage = {LogoutMessage} />} />
 
         <Route path="/register" element={<Register />} />
-        <Route path="/Dashboard" element={<Dashboard />} />
+        <Route path="/AboutUs" element={<AboutUs/>} />
         <Route path="/home" element={<Home/>} />
         <Route path="/plants/:plantId" element={<PlantDetail />} />
         <Route path="/favorites" element={<Favorites />} />

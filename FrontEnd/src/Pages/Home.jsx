@@ -58,7 +58,7 @@ function Home() {
       {/* get plants after button click */}
       <div>
         {plants.map((plant) => (
-          <PlantCard key={plant.id} plant={plant} />
+          <PlantCard key={plant.id} userId={location.state._id} plant={plant}  />
         ))}
       </div>
     </div>

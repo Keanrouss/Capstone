@@ -1,5 +1,4 @@
 import React from 'react';
-import Favorites  from './pages/Favorites'
 import PlantCard from '../components/PlantCard';
 //import PlantDetail from './PlantDetail';
 

@@ -1,8 +1,33 @@
 // src/components/PlantCard.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-function PlantCard({ plant }) {
+import Favorites from '../Pages/Favorites';
+function PlantCard({ plant , userId}) {
+ // console.log(userId)
+const addToFavorites= async ()=>{
+  try {
+    const fav= {
+      userId,
+      common_name: plant.common_name,
+      plantId: plant.id,
+      image_url: plant.default_image.thumbnail
+    }
+    console.log(fav)
+      const response = await fetch(
+          `${import.meta.env.VITE_BASE_URL}/users/add`,
+          {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(fav),
+          }
+        );
+  } catch (error) {
+    console.error ('Error:', error)
+  }
+  
+}
   return (
     <div style={styles.card}>
       <h2>{plant.common_name }</h2>
@@ -12,6 +37,9 @@ function PlantCard({ plant }) {
         style={styles.image}
       />
       <p><strong>common_Name:</strong> {plant.common_name}</p>
+      {addToFavorites && (
+        <button onClick={()=> addToFavorites(plant)}>Save To Favorites</button>
+      )}
       
 
       {/* Add a link to the plant detail page */}

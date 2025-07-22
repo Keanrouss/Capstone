@@ -2,9 +2,12 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
 function Login() {
+
   const [username, setUsername] = useState('');
+
   const navigate = useNavigate();
 
+//console.log('logout', LogoutMessage)
   const handleLogin = async(e) => {
     e.preventDefault();
 

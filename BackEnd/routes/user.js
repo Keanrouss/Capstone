@@ -20,7 +20,7 @@ userRouter.post('/register', async (req, res, next) => {
 userRouter.post('/login', async (req, res, next) => {
    try {
     const user = await User.findOne({username: req.body.username })
-    console.log(user)
+    console.log('user:',user)
     res.status(200).json(user)
    } catch (error) {
     error.status = 404
@@ -61,7 +61,17 @@ userRouter.post('/add', async (req, res, next) => {
     next(error);
   }
 })
-
+userRouter.get('/', async (req, res, next) => {
+  try {
+    console.log('req ', req.body);
+    const newFav = await Favorite.find();
+    //console.log(newFav);
+    res.status(201).json(newFav);
+  } catch (error) {
+    error.status = 400;
+    next(error);
+  }
+})
 
 
 export default userRouter;

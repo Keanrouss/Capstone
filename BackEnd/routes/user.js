@@ -1,10 +1,12 @@
 import { Router } from 'express';
 import User from '../models/User.js'
 const userRouter = Router()
+import Favorite from '../models/favorites.js';
 
 // Create user /user can register
 userRouter.post('/register', async (req, res, next) => {
     try {
+        console.log(req.body)
         const newUser = await User.create(req.body)
         console.log(newUser)
         res.status(201).json('User created Successfully!')
@@ -17,7 +19,7 @@ userRouter.post('/register', async (req, res, next) => {
 //to get all of users
 userRouter.post('/login', async (req, res, next) => {
    try {
-    const user = await User.find({username: req.body.username })
+    const user = await User.findOne({username: req.body.username })
     console.log(user)
     res.status(200).json(user)
    } catch (error) {
@@ -48,7 +50,17 @@ userRouter.delete('/:id', async (req, res) => {
     } catch (error) {
     }
 });
-
+userRouter.post('/add', async (req, res, next) => {
+  try {
+    console.log('req ', req.body);
+    const newFav = await Favorite.create(req.body);
+    console.log(newFav);
+    res.status(201).json('Favorite created Successfully!');
+  } catch (error) {
+    error.status = 400;
+    next(error);
+  }
+})
 
 
 

@@ -38,7 +38,7 @@ const addToFavorites= async ()=>{
       />
       <p><strong>common_Name:</strong> {plant.common_name}</p>
       {addToFavorites && (
-        <button onClick={()=> addToFavorites(plant)}>Save To Favorites</button>
+        <button onClick={()=> addToFavorites(PlantCard)}>Save To Favorites</button>
       )}
       
 
@@ -54,7 +54,7 @@ const styles = {
     margin: '1rem',
     width: '200px',
     borderRadius: '10px',
-    backgroundColor: '#f4fff4',
+    backgroundColor: '#c9d2c9ff',
   },
   image: {
     width: '100%',

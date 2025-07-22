@@ -1,23 +1,31 @@
-import React from 'react';
-import PlantCard from '../components/PlantCard';
-//import PlantDetail from './PlantDetail';
+import NavBar from "../components/NavBar"
 
-
-function Favorites({favorite}) {
+function Favorites({ favorites }) {
   return (
     <div>
-      <h2>🌿 Favorite Plants</h2>
-      {favorite.length === 0 ? (
-        <p>No favorites yet. Add some from the home page!</p>
-      ) : (
-        <div style={styles.grid}>
-          {favorite.map((plant) => (
-            <PlantCard key={plant.id} plant={plant} />
-          ))}
-        </div>
-      )}
-    </div>
-  );
+      <NavBar/>
+      <h2>My Favorite Plants</h2>
+      </div>
+  )
 }
+const styles = {
+  card: {
+    border: '1px solid green',
+    padding: '1.5rem',
+    margin: '1rem',
+    width: '200px',
+    borderRadius: '10px',
+    backgroundColor: '#9dc29dff',
+  },
+  image: {
+    width: '100%',
+    height: 'auto',
+  },
+  link: {
+    textDecoration: 'none',
+    color: 'green',
+    fontWeight: 'bold',
+  },
+};
 
-export default Favorites;
+export default Favorites

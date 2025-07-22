@@ -22,7 +22,7 @@ function NavBar() {
       <div style={styles.links}>
         <Link to="/home" style={styles.link}>Home</Link>
         <Link to="/favorites" style={styles.link}>Favorites</Link>
-        <Link to="/Dashboard" style={styles.link}>Dashboard</Link>
+        <Link to="/dashboard" style={styles.link}>Dashboard</Link>
         <Link to = "/" onClick={handleLogout} style={styles.link}>Logout</Link>
       </div>
     </nav>

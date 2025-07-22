@@ -22,6 +22,7 @@ function Home() {
   const location = useLocation()
   console.log('location ', location)
   console.log('plants ', plants);
+  
 
   useEffect(() => {
     const fetchPlants = async () => {
@@ -57,8 +58,8 @@ function Home() {
 
       {/* get plants after button click */}
       <div>
-        {plants.map((plant) => (
-          <PlantCard key={plant.id} userId={location.state._id} plant={plant}  />
+        {plants.map((plant) => ( // userId={location.state._id} that was a prop but it was causing home page to crash and not show.
+          <PlantCard key={plant.id}  plant={plant}  />
         ))}
       </div>
     </div>

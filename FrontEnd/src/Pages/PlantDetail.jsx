@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import plantDetailData from "../../data/plantdetail.json"
+import NavBar from "../components/NavBar";
 
 
 function PlantDetail() {
@@ -35,6 +36,7 @@ function PlantDetail() {
 console.log(plant.default_image.medium_url)
   return (
     <div>
+      <NavBar/>
       <h2>{plant.common_name}</h2>
       <p><strong>Type:</strong> {plant.type}</p>
       <p><strong>Watering:</strong> {plant.watering}</p>

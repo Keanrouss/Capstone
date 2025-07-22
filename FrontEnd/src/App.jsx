@@ -7,12 +7,15 @@ import Dashboard from './Pages/Dashboard';
 import Register from './Pages/Register';
 import Favorites from './Pages/Favorites';
 import { useState } from 'react';
+// import { useLocation } from 'react-router-dom';
 import NavBar from './components/NavBar';
 
 
 function App() {
+  // const location = useLocation
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [LogoutMessage, setLogoutMessage] = useState('')
+  // const hideNavBar = location.pathname ==='/' || location.pathname === '/register'
 
   return (
     <>
@@ -28,12 +31,11 @@ function App() {
 
         <Route path="/register" element={<Register />} />
         <Route path="/Dashboard" element={<Dashboard />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Home/>} />
         <Route path="/plants/:plantId" element={<PlantDetail />} />
-        <Route path="/Favorites" element={<Favorites />} />
+        <Route path="/favorites" element={<Favorites />} />
       </Routes>
     </>
   )
 }
 export default App;
-

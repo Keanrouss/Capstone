@@ -5,6 +5,7 @@ import PlantDetail from './Pages/PlantDetail'
 import Login from './Pages/Login';
 import Dashboard from './Pages/Dashboard';
 import Register from './Pages/Register';
+import Favorites from './Pages/Favorites';
 
 
 function App() {
@@ -16,6 +17,9 @@ function App() {
          <Route path="/Dashboard" element = {<Dashboard/> }/>
          <Route path="/home" element = {<Home /> }/>
        <Route path="/plants/:plantId" element = {<PlantDetail /> }/>
+        <Route path="/Favorites" element={<Favorites />} />
+
+
       </Routes>
   )
 }

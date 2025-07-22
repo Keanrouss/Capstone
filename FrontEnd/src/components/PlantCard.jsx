@@ -12,6 +12,7 @@ function PlantCard({ plant }) {
         style={styles.image}
       />
       <p><strong>common_Name:</strong> {plant.common_name}</p>
+      
 
       {/* Add a link to the plant detail page */}
       <Link to={`/plants/${plant.id}`} style={styles.link}>View Details</Link>

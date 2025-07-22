@@ -12,7 +12,7 @@ function PlantDetail() {
     const fetchPlant = async () => {
       try {
         const res = await fetch(
-        //   `https://www.perenual.com/api/v2/species/details/${plantId}?key=sk-msZR68792b6b92b8511454`
+          `https://www.perenual.com/api/v2/species/details/${plantId}?key=sk-msZR68792b6b92b8511454`
         );
         if (!res.ok) throw new Error("Failed to fetch plant details");
         const data = await res.json();

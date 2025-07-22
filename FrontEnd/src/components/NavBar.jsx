@@ -9,7 +9,7 @@ function NavBar() {
       <h1 style={styles.logo}>🌿 Plant App</h1>
       </div>
       <div style={styles.links}>
-        <Link to="/" style={styles.link}>Home</Link>
+        <Link to="/home" style={styles.link}>Home</Link>
         <Link to="/favorites" style={styles.link}>Favorites</Link>
         <Link to="/Dashboard" style={styles.link}>Dashboard</Link>
         <Link to="/logout" style={styles.link}>Logout</Link>
@@ -25,7 +25,7 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
     padding: '1rem 2rem',
-    backgroundColor: '#4CAF50',
+    backgroundColor: '#89c98cff',
     color: 'white'
   },
   logo: {

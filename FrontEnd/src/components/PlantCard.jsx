@@ -24,7 +24,7 @@ const addToFavorites= async ()=>{
             body: JSON.stringify(fav),
           }
         );
-        navigate ('/favorites', { state: userId })
+        navigate ('/favorites', { state: {userId} })
   
   } catch (error) {
     console.error ('Error:', error)

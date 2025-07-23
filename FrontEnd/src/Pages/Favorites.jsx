@@ -7,10 +7,12 @@ import PlantCard from "../components/PlantCard";
 
 function Favorites() {
    const [favorites, setFavorites] = useState([])
+const location = useLocation()
+console.log(location.state)
 
   useEffect(()=>{
     async function getdata() {
-     const response = await fetch ('http://localhost:8080/api/users')
+     const response = await fetch (`http://localhost:8080/api/users/${location.state.userId}`)
      const data = await response.json()
      console.log(data) 
      setFavorites(data)
@@ -22,7 +24,7 @@ function Favorites() {
 
   return (
     <div>
-      <NavBar/>
+      <NavBar userId= {location.state.userId}/>
       <h2>My Favorite Plants</h2>
        {favorites.map((plant) => ( // userId={location.state._id} that was a prop but it was causing home page to crash and not show.
           <PlantCard key={plant.id}  userId={location._id} plant={plant}  />

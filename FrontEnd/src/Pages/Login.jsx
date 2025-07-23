@@ -26,7 +26,7 @@ function Login() {
 
     const user = await response.json()
     console.log(user)
-     navigate('/home', {state: user});
+   navigate('/home', {state: user});
   }catch(error){
     console.error ('Error:', error)
   }

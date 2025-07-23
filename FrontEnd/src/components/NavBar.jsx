@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 
-function NavBar() {
+function NavBar({userId}) {
   const navigate = useNavigate();
 
 
@@ -20,8 +20,8 @@ function NavBar() {
       <h1 style={styles.logo}>🌿 Plant-U-ZY</h1>
       </div>
       <div style={styles.links}>
-        <Link to="/home" style={styles.link}>Home</Link>
-        <Link to="/favorites" style={styles.link}>Favorites</Link>
+        <Link to="/home" style={styles.link}state={{userId}}>Home</Link>
+        <Link to="/favorites" style={styles.link} state={{userId}}>Favorites</Link>
         <Link to="/AboutUS" style={styles.link}>About Us</Link>
         <Link to = "/" onClick={handleLogout} style={styles.link}>Logout</Link>
       </div>

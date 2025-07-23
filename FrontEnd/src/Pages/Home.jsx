@@ -20,8 +20,8 @@ function Home() {
   const [plants, setPlants] = useState([]);
   const [loading, setLoading] = useState(false);
   const location = useLocation()
-  console.log('location ', location)
-  console.log('plants ', plants);
+  console.log('location ', location.state)
+ // console.log('plants ', plants);
   
 
   useEffect(() => {
@@ -51,7 +51,7 @@ function Home() {
 
   return (
     <>
-    <NavBar/>
+    <NavBar userId= {location.state.userId}/>
     <div>
       <h1>Plants</h1>
       {loading && <p>Loading...</p>}
@@ -59,7 +59,7 @@ function Home() {
       {/* get plants after button click */}
       <div>
         {plants.map((plant) => ( // userId={location.state._id} that was a prop but it was causing home page to crash and not show.
-          <PlantCard key={plant.id}  userId={location._id} plant={plant}  />
+          <PlantCard key={plant.id}  userId={location.state.userId} plant={plant}  />
         ))}
       </div>
     </div>

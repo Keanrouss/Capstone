@@ -3,7 +3,8 @@ import User from '../models/User.js'
 const userRouter = Router()
 import Favorite from '../models/favorites.js';
 
-// Create user /user can register
+// Create user /user can register. Then their information is stored in my mongoose database. Then they can lo
+//log in after registration.
 userRouter.post('/register', async (req, res, next) => {
     try {
         console.log(req.body)
@@ -16,12 +17,12 @@ userRouter.post('/register', async (req, res, next) => {
     }
 })
 
-//to get all of users
+//to get all of user after login. Also there's a code in front end that track user activity on website
 userRouter.post('/login', async (req, res, next) => {
    try {
     const user = await User.findOne({username: req.body.username })
     console.log('user:',user)
-    res.status(200).json(user)
+    res.status(200).json({userId:user._id})
    } catch (error) {
     error.status = 404
     next(error)
@@ -29,26 +30,18 @@ userRouter.post('/login', async (req, res, next) => {
     
 
 });
-//patch so users can update info
-userRouter.patch('/:id', async (req, res) => {
-    try{
-    res.json(await Client.findByIdAndUpdate(req.params.id, req.body))
-    }catch(error){
-        error.status = 404
+//Allow user to delete and remove plants from their favorite list.
 
-    }
-});
-
-userRouter.delete('/:id', async (req, res) => {
-    try {
-        const result = await Client.deleteOne({_id: req.params.id});
-        if (result.deletedCount === 0) {
-                return res.status(404).json({ error: 'User not found' });
-            }
-        console.log(req.params.id)
-        res.json('Client deleted Successfully!')
-    } catch (error) {
-    }
+userRouter.delete('/:userId', async (req, res, next) => {
+  try {
+    console.log('req ', req.params);
+    const deleteFavorites = await Favorite.find({userId: req.params.userId});
+    //console.log(newFav);
+    res.status(201).json(deleteFavorites);
+  } catch (error) {
+    error.status = 400;
+    next(error);
+  }
 });
 userRouter.post('/add', async (req, res, next) => {
   try {
@@ -61,12 +54,12 @@ userRouter.post('/add', async (req, res, next) => {
     next(error);
   }
 })
-userRouter.get('/', async (req, res, next) => {
+userRouter.get('/:userId', async (req, res, next) => {
   try {
-    console.log('req ', req.body);
-    const newFav = await Favorite.find();
+    console.log('req ', req.params);
+    const userFavorites = await Favorite.find({userId: req.params.userId});
     //console.log(newFav);
-    res.status(201).json(newFav);
+    res.status(201).json(userFavorites);
   } catch (error) {
     error.status = 400;
     next(error);

@@ -5,6 +5,7 @@ import testData from '../../data/data.json';
 import PlantCard from '../components/PlantCard'
 import Register from './Register';
 import NavBar from '../components/NavBar';
+import PlantCardContainer from '../components/PlantCardContainer';
 
 
 
@@ -55,20 +56,26 @@ function Home() {
     <div>
       <h1>Plants</h1>
       {loading && <p>Loading...</p>}
-
       {/* get plants after button click */}
-      <div>
+    {/* <div style={styles.plantCardContainer}> */}
+<PlantCardContainer>
         {plants.map((plant) => ( // userId={location.state._id} that was a prop but it was causing home page to crash and not show.
-          <PlantCard key={plant.id}  userId={location.state.userId} plant={plant}  />
-        ))}
-      </div>
+          <PlantCard 
+          key={plant.id}  
+          userId={location.state.userId} 
+          plant={plant}
+          />
+        )
+        )}
+      
+    </PlantCardContainer>
     </div>
     </>
   );
 }
 //box look for the card to display plant
 const styles = {
-  grid: {
+plantCardContainer: {
     display: 'flex',
     flexWrap: 'wrap',
     justifyContent: 'center',

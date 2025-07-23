@@ -3,6 +3,7 @@ import NavBar from "../components/NavBar"
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import PlantCard from "../components/PlantCard";
+import PlantCardContainer from "../components/PlantCardContainer";
 
 
 function Favorites() {
@@ -26,9 +27,12 @@ console.log(location.state)
     <div>
       <NavBar userId= {location.state.userId}/>
       <h2>My Favorite Plants</h2>
+      <PlantCardContainer>
        {favorites.map((plant) => ( // userId={location.state._id} that was a prop but it was causing home page to crash and not show.
           <PlantCard key={plant.id}  userId={location._id} plant={plant}  />
-        ))}
+        )
+        )}
+        </PlantCardContainer>
       </div>
   )
 }

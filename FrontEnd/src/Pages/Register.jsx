@@ -38,8 +38,8 @@ function Register() {
     <div style={{ padding: '2rem'}}>
       <img src="/registerpage.jpg" alt="RegisterPhoto" className='Registrationlook'/>
       <h2>Register</h2>
-
-      <form onSubmit={handleRegister}>
+      <form
+      onSubmit={handleRegister}>
         <input
           type="text"
           placeholder="Enter username"
@@ -47,9 +47,9 @@ function Register() {
           onChange={(e) => setUsername(e.target.value)}
         />
         <button type="Submit">Register</button>
+        <Link to='/'>Log In</Link>
       </form>
-      <Link to='/'>Log In</Link>
-    </div>
+      </div>
   );
 }
 

@@ -6,7 +6,38 @@ body{
     rgb(122, 198, 191),
     rgb(170, 151, 192)
   );
-  display: block;
+
+}
+h2{
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+h1{
+  display: flex;
+  justify-content: center;
+}
+h3{
+  display: flex;
+  justify-content: center;
+  margin-top: 10%;
+}
+.about-box {
+  background-color: #f0f8f5; /* light greenish background */
+  border: 2px solid #4caf50; /* green border */
+  padding: 20px;
+  margin: 30px auto;
+  border-radius: 12px;
+  max-width: 700px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+
+.about-box h2 {
+  margin-bottom: 12px;
+  color: #389a6e; /* darker green */
 }
 
 .Homeview{
@@ -14,6 +45,8 @@ body{
 }
 .Plantdetailview {
   background-image: url('plantdetailspage.jpg');
+  background-repeat: no-repeat;
+   background-size: cover;
   position: fixed;
   top: 0;
   left: 0;
@@ -23,7 +56,7 @@ body{
   z-index: -1;  
 }
 .Favoriteview{
-   background-image: url('registerpage.jpg');
+   background-image: url('newfavorites.webp');
   position: fixed;
   top: 0;
   left: 0;
@@ -36,6 +69,8 @@ body{
 }
 .loginview{
    background-image: url('HomepagePlant.jpeg');
+   background-repeat: no-repeat;
+   background-size: cover;
    position: fixed;
   top: 0;
   left: 0;
@@ -43,11 +78,14 @@ body{
   height: 100vh;
   object-fit: cover;
   z-index: -1;  
-
-
 } 
+input{
+  display: flexbox;
+  justify-content: center;
+  margin-left: 44%;
+}
   .Registrationlook {
-  background-image: url('registerpage.jpg');
+  background-image: url('newregister.jpg');
   position: fixed;
   top: 0;
   left: 0;
@@ -58,7 +96,7 @@ body{
 
  } 
 .AboutView{
-  background-image: url('logoutpage.avif');
+  background-image: url('aboutpage.jpg');
   position: fixed;
   top: 0;
   left: 0;
@@ -74,7 +112,7 @@ body{
   transition: filter 300ms;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #9c9ec6aa);
 } 
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
@@ -105,19 +143,21 @@ body{
 button{
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: 0.6em 1.0em;
+  font-size: 1.1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #f0eeee;
   cursor: pointer;
   transition: border-color 0.25s;
   margin: 5px;
+  justify-items: center;
 }
 button:hover {
   /* allow side the buttom corner to sligthly change to the color of blue. Indicating that the user 
 's mouse is over the button */
   border-color: #646cff; 
 }
+
 
 

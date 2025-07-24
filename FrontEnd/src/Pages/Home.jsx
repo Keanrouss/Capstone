@@ -53,7 +53,7 @@ function Home() {
   return (
     <>
     <NavBar userId= {location.state.userId}/>
-    <div>
+    <div className='Homeview'>
       <h1>Plants</h1>
       {loading && <p>Loading...</p>}
       {/* get plants after button click */}
@@ -67,7 +67,6 @@ function Home() {
           />
         )
         )}
-      
     </PlantCardContainer>
     </div>
     </>

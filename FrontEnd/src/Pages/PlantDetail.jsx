@@ -36,7 +36,9 @@ function PlantDetail() {
 console.log(plant.default_image.medium_url)
   return (
     <div>
+      
       <NavBar/>
+      <div className="Plantdetailview"/>
       <h2>{plant.common_name}</h2>
       <p><strong>Type:</strong> {plant.type}</p>
       <p><strong>Watering:</strong> {plant.watering}</p>

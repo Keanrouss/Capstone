@@ -26,6 +26,7 @@ console.log(location.state)
   return (
     <div>
       <NavBar userId= {location.state.userId}/>
+      <div className='Favoriteview'>
       <h2>My Favorite Plants</h2>
       <PlantCardContainer>
        {favorites.map((plant) => ( // userId={location.state._id} that was a prop but it was causing home page to crash and not show.
@@ -33,6 +34,7 @@ console.log(location.state)
         )
         )}
         </PlantCardContainer>
+        </div>
       </div>
   )
 }

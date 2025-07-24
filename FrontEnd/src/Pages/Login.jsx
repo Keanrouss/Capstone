@@ -38,8 +38,9 @@ function Login() {
   };
 
   return (
-    <div style={{ padding: '2rem' }}>
-      <h2>Login Page</h2>
+    <div style={{ padding: '2rem' }}> 
+ <div className='loginview'>
+      <h2>Login</h2>
       <form onSubmit={handleLogin}>
         <input
           type="text"
@@ -50,9 +51,12 @@ function Login() {
         <button type="Submit">Log In</button>
       </form>
       <Link to='/register'>Register</Link>
+      </div>
     </div>
+    
   );
 }
+
 
 export default Login;
 

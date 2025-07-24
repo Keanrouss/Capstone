@@ -36,7 +36,7 @@ function Register() {
 
   return (
     <div style={{ padding: '2rem'}}>
-      <img src="/registerpage.jpg" alt="RegisterPhoto" className='Registrationlook'/>
+      <div className='Registrationlook'/>
       <h2>Register</h2>
       <form
       onSubmit={handleRegister}>

@@ -113,7 +113,11 @@ button{
   cursor: pointer;
   transition: border-color 0.25s;
   margin: 5px;
-
-  
 }
+button:hover {
+  /* allow side the buttom corner to sligthly change to the color of blue. Indicating that the user 
+'s mouse is over the button */
+  border-color: #646cff; 
+}
+
 

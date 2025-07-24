@@ -1,3 +1,4 @@
+// file created and pass to favorite/home to promote easy displaying of the plantcards.
 const styles = {
   plantCardContainer: {
     display: 'flex',
